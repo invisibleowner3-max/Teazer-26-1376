@@ -1,0 +1,360 @@
+/* =========================================================
+   AnimeVerse - Week 3 CSS Practical
+   External stylesheet for Questions 3-10
+   ========================================================= */
+
+/* QUESTION 3: Consistent font, page background and headings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: lime;
+}
+
+/* QUESTION 4: Element selector - all paragraphs */
+p {
+    color: #eee;
+    font-size: 18px;
+}
+
+/* QUESTION 4: Class selector - used by multiple elements */
+.bold {
+    font-weight: bold;
+    color: gold;
+}
+
+.card {
+    box-sizing: border-box;
+}
+
+/* QUESTION 4: ID selector - unique element */
+#home {
+    scroll-margin-top: 80px;
+}
+
+/* QUESTION 4: Group selector - h1 and h2 share the same font */
+h1,
+h2 {
+    font-family: Arial, sans-serif;
+}
+
+/* QUESTION 7: Navigation Bar Using Flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+.navbar a:hover {
+    background-color: #00bfff;
+    color: #111;
+}
+
+/* QUESTION 5: CSS Box Model */
+.box-model-section {
+    width: 70%;
+    background-color: #222;
+    border: 2px solid #00bfff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* QUESTION 6: Profile Image */
+.profile-section {
+    text-align: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    border: 5px double #00bfff;
+    padding: 8px;
+    margin: 15px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* General image styling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    margin: 8px;
+    border-radius: 8px;
+    border: 2px solid #444;
+}
+
+/* Responsive videos */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+iframe {
+    width: 360px;
+    height: 215px;
+    margin: 8px;
+    border: 0;
+    border-radius: 8px;
+    max-width: calc(100% - 16px);
+}
+
+/* Audio */
+audio {
+    display: block;
+    width: min(500px, 100%);
+    margin: 12px 0;
+}
+
+/* QUESTION 8 & 9: Cards + CSS Grid */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.card {
+    border: 2px solid #00bfff;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 12px;
+    min-height: 170px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.2s;
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.25);
+}
+
+/* Form */
+form {
+    max-width: 420px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #333;
+}
+
+form label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+input[type="submit"] {
+    background-color: #00bfff;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #008dcc;
+}
+
+/* Table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    border: 1px solid #fff;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #c00;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #444;
+}
+
+/* =========================================================
+   QUESTION 10: RESPONSIVE DESIGN
+   At 768px or less:
+   - Cards become one column
+   - Images fit the screen
+   - Text remains readable
+   - Navigation adjusts
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+        position: static;
+    }
+
+    .navbar a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .box-model-section {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: 240px;
+        margin: 0;
+    }
+
+    .profile-image {
+        max-width: 90%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 215px;
+        margin: 8px 0;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .image-gallery img {
+        height: auto;
+        max-height: 350px;
+    }
+}
