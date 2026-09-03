@@ -1,273 +1,367 @@
-/* =========================================================
-   AnimeVerse - Week 3 CSS Practical
-   External stylesheet for Questions 3-10
-   ========================================================= */
+```css
+/* =========================================
+   ANIMEVERSE - MODERN ANIME CSS
+   ========================================= */
 
-/* QUESTION 3: Consistent font, page background and headings */
+/* ---------- General Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
-    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(0, 191, 255, 0.12), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 0, 100, 0.10), transparent 30%),
+        #08080d;
+    color: #ffffff;
+    padding: 30px;
     line-height: 1.6;
 }
 
-h1,
-h2,
-h3 {
-    font-family: Arial, sans-serif;
-}
+
+/* ---------- Main Title ---------- */
 
 h1 {
-    text-decoration: underline;
+    text-align: center;
+    color: #00c8ff;
+    text-decoration: none;
+    font-size: 42px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 5px #00c8ff,
+        0 0 15px #00c8ff,
+        0 0 30px rgba(0, 200, 255, 0.6);
 }
 
+
+/* ---------- Section Headings ---------- */
+
 h2 {
-    color: orange;
+    color: #ff9d00;
+    font-size: 28px;
+    margin-top: 45px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255, 157, 0, 0.4);
+    text-shadow: 0 0 10px rgba(255, 157, 0, 0.5);
 }
 
 h3 {
-    color: lime;
+    color: #39ff88;
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px rgba(57, 255, 136, 0.5);
 }
 
-/* QUESTION 4: Element selector - all paragraphs */
+
+/* ---------- Paragraphs ---------- */
+
 p {
-    color: #eee;
-    font-size: 18px;
+    color: #d7d7df;
+    font-size: 16px;
+    margin-bottom: 18px;
 }
 
-/* QUESTION 4: Class selector - used by multiple elements */
+p i {
+    color: #bdbdcc;
+}
+
+
+/* ---------- Bold Paragraph ---------- */
+
 .bold {
     font-weight: bold;
-    color: gold;
-}
-
-.card {
-    box-sizing: border-box;
-}
-
-/* QUESTION 4: ID selector - unique element */
-#home {
-    scroll-margin-top: 80px;
-}
-
-/* QUESTION 4: Group selector - h1 and h2 share the same font */
-h1,
-h2 {
-    font-family: Arial, sans-serif;
-}
-
-/* QUESTION 7: Navigation Bar Using Flexbox */
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    background-color: #222;
-    padding: 15px;
-    margin-bottom: 25px;
-    border: 2px solid #00bfff;
-    border-radius: 10px;
-    position: sticky;
-    top: 10px;
-    z-index: 10;
-}
-
-.navbar a {
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 14px;
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.06);
+    border-left: 4px solid #ffd700;
+    padding: 12px 15px;
     border-radius: 6px;
 }
 
-.navbar a:hover {
-    background-color: #00bfff;
-    color: #111;
+
+/* ---------- Lists ---------- */
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
 }
 
-/* QUESTION 5: CSS Box Model */
-.box-model-section {
-    width: 70%;
-    background-color: #222;
-    border: 2px solid #00bfff;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-sizing: border-box;
+li {
+    background: linear-gradient(135deg, #151522, #202034);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 200, 255, 0.35);
+    border-radius: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
-/* QUESTION 6: Profile Image */
-.profile-section {
-    text-align: center;
+li:hover {
+    color: #00c8ff;
+    border-color: #00c8ff;
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
 }
 
-.profile-image {
-    width: 200px;
-    height: 280px;
-    object-fit: cover;
-    border: 5px double #00bfff;
-    padding: 8px;
-    margin: 15px;
-    border-radius: 12px;
-    box-sizing: border-box;
+
+/* ---------- Streaming Status ---------- */
+
+mark {
+    background: #00d084;
+    color: #06120d;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
-/* General image styling */
+del {
+    color: #888;
+}
+
+sup {
+    color: #00c8ff;
+}
+
+
+/* =========================================
+   IMAGES
+   ========================================= */
+
 img {
-    max-width: 100%;
-    height: auto;
-}
-
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.image-gallery img {
     width: 200px;
     height: 280px;
     object-fit: cover;
-    margin: 8px;
-    border-radius: 8px;
-    border: 2px solid #444;
+    margin: 10px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
-/* Responsive videos */
-.video-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+img:hover {
+    transform: translateY(-10px) scale(1.04);
+    border-color: #00c8ff;
+    box-shadow:
+        0 10px 30px rgba(0, 200, 255, 0.25),
+        0 0 20px rgba(0, 200, 255, 0.25);
 }
+
+
+/* =========================================
+   YOUTUBE TRAILERS
+   ========================================= */
 
 iframe {
     width: 360px;
     height: 215px;
-    margin: 8px;
-    border: 0;
-    border-radius: 8px;
-    max-width: calc(100% - 16px);
+    margin: 10px;
+    border: 2px solid #252535;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
 }
 
-/* Audio */
+iframe:hover {
+    transform: translateY(-6px);
+    border-color: #ff3b81;
+    box-shadow:
+        0 10px 30px rgba(255, 59, 129, 0.25);
+}
+
+
+/* =========================================
+   AUDIO
+   ========================================= */
+
 audio {
     display: block;
-    width: min(500px, 100%);
-    margin: 12px 0;
+    width: 400px;
+    max-width: 100%;
+    margin: 15px 0;
+    border-radius: 30px;
 }
 
-/* QUESTION 8 & 9: Cards + CSS Grid */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin: 20px 0;
-}
 
-.card {
-    border: 2px solid #00bfff;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 12px;
-    min-height: 170px;
-    text-align: center;
-}
+/* =========================================
+   JOIN FORM
+   ========================================= */
 
-.card h3 {
-    margin-top: 0;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    transition: 0.2s;
-    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.25);
-}
-
-/* Form */
 form {
-    max-width: 420px;
-    background-color: #222;
-    padding: 15px;
-    border-radius: 8px;
-    border: 2px solid #333;
+    max-width: 450px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 30, 45, 0.95),
+            rgba(14, 14, 22, 0.95)
+        );
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 200, 255, 0.25);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(0, 200, 255, 0.05);
 }
 
-form label {
-    display: block;
-    margin-top: 8px;
-    font-weight: bold;
-}
+
+/* ---------- Form Inputs ---------- */
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 13px 15px;
     margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 1px solid #555;
+    background: #0d0d15;
+    color: white;
+    border: 1px solid #333345;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s ease;
 }
 
+input::placeholder {
+    color: #777789;
+}
+
+input:focus {
+    border-color: #00c8ff;
+    box-shadow:
+        0 0 10px rgba(0, 200, 255, 0.25);
+}
+
+
+/* ---------- Submit Button ---------- */
+
 input[type="submit"] {
-    background-color: #00bfff;
-    color: #111;
+    background: linear-gradient(
+        135deg,
+        #00bfff,
+        #0066ff
+    );
+    color: white;
     font-weight: bold;
+    font-size: 16px;
+    border: none;
     cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #008dcc;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 20px rgba(0, 140, 255, 0.4);
 }
 
-/* Table */
-.table-wrapper {
-    width: 100%;
-    overflow-x: auto;
+input[type="submit"]:active {
+    transform: scale(0.98);
 }
+
+
+/* =========================================
+   ANIME TABLE
+   ========================================= */
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    min-width: 650px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #11111a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 th,
 td {
-    border: 1px solid #fff;
-    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #292938;
+    padding: 14px 12px;
     text-align: center;
 }
 
 th {
-    background-color: #c00;
+    background: linear-gradient(
+        135deg,
+        #e00035,
+        #a00025
+    );
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    border-top: 1px solid #444;
+td {
+    color: #d8d8e0;
 }
 
-/* =========================================================
-   QUESTION 10: RESPONSIVE DESIGN
-   At 768px or less:
-   - Cards become one column
-   - Images fit the screen
-   - Text remains readable
-   - Navigation adjusts
-   ========================================================= */
+tr {
+    transition: 0.25s ease;
+}
 
-@media (max-width: 768px) {
+tr:hover {
+    background: rgba(0, 200, 255, 0.07);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
 
     body {
-        margin: 10px;
-        font-size: 16px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    img {
+        width: 180px;
+        height: 250px;
+    }
+
+    iframe {
+        width: 320px;
+        height: 190px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
     }
 
     h1 {
         font-size: 28px;
+        line-height: 1.3;
     }
 
     h2 {
@@ -275,86 +369,70 @@ footer {
     }
 
     h3 {
-        font-size: 19px;
+        font-size: 20px;
     }
 
-    p {
-        font-size: 17px;
-    }
-
-    .navbar {
+    ul {
         flex-direction: column;
-        gap: 8px;
-        position: static;
     }
 
-    .navbar a {
-        width: 100%;
+    li {
         text-align: center;
-        box-sizing: border-box;
     }
 
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .box-model-section {
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .image-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .image-gallery img {
-        width: 100%;
-        height: 240px;
-        margin: 0;
-    }
-
-    .profile-image {
-        max-width: 90%;
+    img {
+        width: calc(50% - 15px);
+        height: 230px;
+        margin: 5px;
     }
 
     iframe {
         width: 100%;
-        height: 215px;
+        height: 210px;
         margin: 8px 0;
     }
 
     form {
-        max-width: 100%;
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
 
-@media (max-width: 480px) {
 
-    h1 {
-        font-size: 23px;
-    }
+/* =========================================
+   SCROLLBAR
+   ========================================= */
 
-    h2 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .image-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .image-gallery img {
-        height: auto;
-        max-height: 350px;
-    }
+::-webkit-scrollbar {
+    width: 10px;
 }
+
+::-webkit-scrollbar-track {
+    background: #08080d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00aeea;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00d4ff;
+}
+
+
+/* =========================================
+   SELECTION
+   ========================================= */
+
+::selection {
+    background: #00c8ff;
+    color: #000;
+}
+```
+
