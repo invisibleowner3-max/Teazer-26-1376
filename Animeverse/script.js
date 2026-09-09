@@ -1,6 +1,6 @@
 ```javascript
 // ==========================================
-// AnimeVerse - JavaScript
+// AnimeVerse - JavaScript  
 // ==========================================
 
 // Wait until the HTML page has completely loaded
